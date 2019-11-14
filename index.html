@@ -214,7 +214,7 @@ window.onload = function()
   
   /* BLUE AIR */
   blue = new Image(target_scalex, target_scaley)
-  blue.src=friend
+  blue.src=""
   blue.addEventListener('load', function() {
     context.drawImage( blue, bluex, bluey) }, false)
     
@@ -233,7 +233,7 @@ window.onload = function()
   var moveInterval = setInterval(function() { drawred1(); }, 30)
 /* RED AIR #2*/
 red2 = new Image(target_scalex, target_scaley)
-  red2.src=ex_friend
+  red2.src=""
   red2.addEventListener('load', function() {
     context.drawImage( red2, red2x, red2y) }, false)
   
