@@ -24,7 +24,7 @@
     top:0;
     left:0;
     width:1700px;
-    height:1700px;
+    height:1300px;
     
 }
 .holder{
@@ -254,7 +254,7 @@ stranger = new Image(target_scalex, target_scaley)
 }
 function refresh(){
   context = canvas.getContext("2d")
-  context.clearRect(0, 0, 1700 , 1700 )
+  context.clearRect(0, 0, 1700 , 1300 )
   $('#speed').html('RATE: '+simrate+'x <br/>B: '+bluespeed+', R: '+red1speed+' KTS<br/>&copy; TC 2019');
   
 }
@@ -752,9 +752,9 @@ function keypress_handler(event) {
             </div>
   <div class="holder">
         <div class="bullseye" id="bullseye" style="float:centre;padding-left: 10px;font-weight:1; color: #FFF;"></div>
-   <canvas id="holder" width="1700px" height="1700px"></canvas>
+   <canvas id="holder" width="1700px" height="1300px"></canvas>
     <br/>
-    <canvas id="canvas" width="1700px" height="1700px">
+    <canvas id="canvas" width="1700px" height="1300px">
 </canvas>
 
 
