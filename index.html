@@ -169,31 +169,7 @@ var last_mousex = last_mousey = 0;
 var mousex = mousey = 0;
 var mousedown = false;
 //Mousedown
-$(canvas).on('mousedown', function(e) {
-    if(last_mousex < mousex || last_mousey < mousey){
-        $('#braa').css({
-        left:  e.pageX+20,
-        top:   e.pageY+20
-        });
-            };
-    if(last_mousex > mousex || last_mousey > mousey){
-        $('#braa').css({
-        left:  e.pageX-20,
-        top:   e.pageY-20
-        });
-            };
-    last_mousex = parseInt(e.clientX-canvasx);
-	last_mousey = parseInt(e.clientY-canvasy);
-    mousedown = true;
- 
-});
-//Mouseup
-$(canvas).on('mouseup', function(e) {
-    mousedown = false;
-    context = canvas.getContext("2d")
-  context.clearRect(0, 0, 1700 , 1700 );
-  $('#braa').html('');
-});
+
 //Mousemove BRAA
 $(canvas).on('mousemove', function(e) {
     mousex = parseInt(e.clientX-canvasx);
