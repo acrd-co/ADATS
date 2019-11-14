@@ -25,7 +25,6 @@
     left:0;
     width:1700px;
     height:1700px;
-    overflow: hidden;
     
 }
 .holder{
@@ -40,7 +39,7 @@
     padding: 2px;
     background: url('background.jpeg');
     background-repeat: no-repeat;
-    overflow: hidden;
+
 }
 #HDG{
     border: 2px solid #FFF;
@@ -170,44 +169,7 @@ var mousedown = false;
 //Mousedown
 
 //Mousemove BRAA
-$(canvas).on('mousemove', function(e) {
-    mousex = parseInt(e.clientX-canvasx);
-    mousey = parseInt(e.clientY-canvasy);
-    if(mousedown) {
-        ctx.clearRect(0,0,canvas.width,canvas.height); //clear canvas
-        ctx.beginPath();
-        ctx.moveTo(last_mousex,last_mousey);
-        ctx.lineTo(mousex,mousey);
-        ctx.strokeStyle = '#A0A0A0';
-        ctx.lineWidth = 2   ;
-        ctx.lineJoin = ctx.lineCap = 'round';
-        ctx.stroke();
-        var datum=Math.atan((mousey-last_mousey)/(last_mousex-mousex));
-        datum=datum*(180/Math.PI);
-        var length= Math.round((Math.sqrt((last_mousex-mousex)*(last_mousex-mousex)+(last_mousey-mousey)*(last_mousey-mousey)))/8);
-        angle = ((datum + 179) % 360 + 360) % 360 - 179;
-        degrees = Math.round((360+180-datum + 360-270) % 360);
-            if(last_mousex < mousex ){
-                degrees = degrees - 180
-            }
-        $('#braa').html(degrees+'/'+length);
-        $('#bullseye').html('');  
-    
-    }
-    else {
-        bullseye_x=787
-        bullseye_y=643
-        var datum=Math.atan((mousey-bullseye_y)/(bullseye_x-mousex));
-        datum=datum*(180/Math.PI);
-        var length= Math.round((Math.sqrt((bullseye_x-mousex)*(bullseye_x-mousex)+(bullseye_y-mousey)*(bullseye_y-mousey)))/12.2667);
-        angle = ((datum + 179) % 360 + 360) % 360 - 179;
-        degrees = Math.round((360+180-datum + 360-270) % 360);
-            if(bullseye_x < mousex ){
-                degrees = degrees - 180
-            }
-        $('#bullseye').html(degrees+'/'+length+' '+mousex+'x '+mousey+'y');
-    }
-});
+
     });
 window.onload = function()
 {
